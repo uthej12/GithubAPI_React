@@ -1,24 +1,27 @@
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import GistList from './components/gistList';
+import Navbar from './components/Navbar';
+import Pagination from './components/Pagination';
+
+/**
+ * GitHub Gist Assesment by Axonista
+ * Author: Uthej Goud
+ * goudtigulla@gmail.com
+ */
+/*
+Parent component for Navbar and GistList Components
+*/ 
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <Navbar/>
+      <GistList />
+    </React.Fragment>
+    
   );
 }
 

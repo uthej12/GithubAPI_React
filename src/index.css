@@ -1,13 +1,93 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #ffffff;
+  font-family: "Roboto", sans-serif !important;
+}
+
+.gc {
+  border: none !important;
+  width: 100%;
+}
+
+.gistPrint {
+  margin-bottom: 0.5em !important;
+  font-size: 0.8em;
+  overflow: hidden;
+}
+
+.sideText {
+  background-color: #f2f2f2;
+}
+
+@media screen and (min-width: 761px) {
+  .sideText {
+    width: 6% !important;
+  }
+}
+@media screen and (min-width: 1050px) {
+  .sideText {
+    width: 5% !important;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .sideText {
+    width: 3.3% !important;
+  }
+}
+
+.sideTextBar {
+  padding-left: 0.8rem !important;
+  padding-bottom: 0.05em !important;
+  width: 97%;
+}
+
+.avatarImage {
+  height: 3em;
+  width: 3em;
+  border-radius: 50%;
+}
+
+.nd {
+  padding-left: 2px !important;
+}
+
+.desc {
+  text-align: end;
+}
+
+.timeElapse {
+  font-size: 0.7em;
+}
+
+.Pagination a {
+  color: #0b25e5;
+}
+
+.Pagination .active {
+  background-color: #0b25e5;
+}
+
+.Pagination .page-link:hover {
+  background-color: #0b25e5;
+  color: #ffffff;
+}
+
+.sort {
+  background-color: #0b25e5 !important;
+  color: #ffffff !important;
+}
+
+.navigationBar {
+  background-color: #0c1642 !important;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }

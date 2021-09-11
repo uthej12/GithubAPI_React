@@ -4,11 +4,17 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import bootstrap from 'bootstrap/dist/css/bootstrap.css';
+import GistContainer from './components/gistContainer';
+import GistList from './components/gistList';
+
+/**
+ * GitHub Gist Assesment by Axonista
+ * Author: Uthej Goud
+ * goudtigulla@gmail.com
+ */
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <App/>,
   document.getElementById('root')
 );
 

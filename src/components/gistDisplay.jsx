@@ -10,7 +10,10 @@ import React from "react";
  * text in a card element with line numbers.
  */
 
+function dispAsParagraph(props) {}
+
 function GistDisplay(props) {
+  dispAsParagraph(props);
   return (
     <div className="row">
       <div className="col d-flex justify-content-center">
@@ -19,11 +22,11 @@ function GistDisplay(props) {
             //console.log(line, line.length);
             return (
               <div className="row">
-                <div className="col-1 sideText">
+                <div className="col-1 d-none d-sm-block sideText">
                   <pre className="gistPrint">{index + 1}</pre>
                 </div>
                 <div className="col-11">
-                  <pre className="gistPrint d-flex" key={index}>
+                  <pre className="gistPrint" key={index}>
                     {line}
                   </pre>
                 </div>

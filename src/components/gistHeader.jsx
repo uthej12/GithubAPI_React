@@ -17,20 +17,20 @@ function GistHeader(props) {
         <div className="col nd">
           <div className="container-fluid nd">
             <div className="row">
-              <span className="col-1 ">
+              <span className="col-3 col-sm-2 col-md-1">
                 <img
                   src={props.owner.avatar_url}
                   alt=""
                   className="avatarImage"
                 />
               </span>
-              <div className="col-3 col-md-3 col-sm-3">
+              <div className="col-9 col-sm-3 col-md-4">
                 <div className="row nameDate">{props.owner.login}</div>
                 <div className="row timeElapse">
                   {calcTimeInterval(props.createdAt)}
                 </div>
               </div>
-              <div className="col-8 col-md-8 col-sm-8 d-flex justify-content-end">
+              <div className="col-8 col-sm-7 col-md-7 d-none d-md-block text-end">
                 {props.description}
               </div>
             </div>

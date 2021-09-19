@@ -72,22 +72,28 @@ class GistList extends React.Component {
   render() {
     this.getCurrentPage();
     return (
-      <div className="container mt-4">
-        <div className="row">
-          <div className="container d-flex justify-content-end p-3">
-            <SortGist parentCallback={this.handleSort} />
-          </div>
-          {this.getCurrentPage().map((gist) => (
-            <div className="container d-flex justify-content-center p-3">
-              <GistContainer key={gist.id} gist={gist} />
+      <div className="container-fluid p-3">
+        <div className="container">
+          <div className="row">
+            <div className="container-fluid d-flex justify-content-end p-3">
+              <SortGist parentCallback={this.handleSort} />
             </div>
-          ))}
-          <div className="container d-flex justify-content-center p-3">
-            <Pagination
-              pageNo={this.state.pageNo}
-              totalPages={this.state.totalPages}
-              parentCallback={this.handleCallback}
-            />
+          </div>
+          <div className="row">
+            {this.getCurrentPage().map((gist) => (
+              <div className="container d-flex justify-content-center">
+                <GistContainer key={gist.id} gist={gist} />
+              </div>
+            ))}
+          </div>
+          <div className="row">
+            <div className="container-fluid d-flex justify-content-center p-3">
+              <Pagination
+                pageNo={this.state.pageNo}
+                totalPages={this.state.totalPages}
+                parentCallback={this.handleCallback}
+              />
+            </div>
           </div>
         </div>
       </div>

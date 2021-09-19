@@ -51,7 +51,7 @@ class Pagination extends React.Component {
                 {this.createPageArray(this.state.totalPages).map((PageNo) => {
                   if (PageNo === this.state.pageNo) {
                     return (
-                      <li key={PageNo} class="page-item active">
+                      <li key={PageNo} class="page-item active showWhen">
                         <button class="page-link" href="#">
                           {PageNo + 1}
                         </button>
@@ -59,7 +59,7 @@ class Pagination extends React.Component {
                     );
                   } else {
                     return (
-                      <li key={PageNo} class="page-item">
+                      <li key={PageNo} class="page-item showWhen">
                         <button
                           class="page-link"
                           onClick={() => this.OnTrigger(PageNo)}

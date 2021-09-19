@@ -67,7 +67,7 @@ class GistContainer extends React.Component {
 
   render() {
     return (
-      <div className="card gc p-2 m-3">
+      <div className="card gc p-2 mt-3">
         <GistHeader
           owner={this.props.gist.owner}
           filename={this.getFileName()}

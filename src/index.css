@@ -52,6 +52,20 @@ body {
   width: 3em;
   border-radius: 50%;
 }
+@media screen and (max-width: 320px) {
+  .avatarImage {
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 50%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .avatarImage {
+    height: 2em;
+    width: 2em;
+    border-radius: 50%;
+  }
+}
 
 .nd {
   padding-left: 2px !important;
@@ -90,4 +104,10 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+@media screen and (max-width: 500px) {
+  .showWhen {
+    display: none;
+  }
 }

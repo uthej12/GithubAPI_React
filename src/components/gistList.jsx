@@ -51,11 +51,13 @@ class GistList extends React.Component {
 
   handleCallback = (childData) => {
     //Handles page change from Pagination component
+    window.scrollTo(0, 0);
     this.setState({ pageNo: childData });
   };
 
   handleSort = (type) => {
     //handels sort functionality form SortGist component
+    window.scrollTo(0, 0);
     if (type != this.state.reverse) {
       this.setState({ gist: this.state.gists.reverse(), reverse: type });
     }
@@ -81,8 +83,11 @@ class GistList extends React.Component {
           </div>
           <div className="row">
             {this.getCurrentPage().map((gist) => (
-              <div className="container d-flex justify-content-center">
-                <GistContainer key={gist.id} gist={gist} />
+              <div
+                className="container d-flex justify-content-center"
+                key={gist.id}
+              >
+                <GistContainer gist={gist} />
               </div>
             ))}
           </div>

@@ -24,33 +24,36 @@ class SortGist extends React.Component {
 
   render() {
     return (
-      <div class="dropdown ">
+      <div className="dropdown ">
         <button
-          class="btn btn-secondary dropdown-toggle sort"
+          className="btn btn-secondary dropdown-toggle sort"
           type="button"
           id="dropdownMenuButton1"
           data-bs-toggle="dropdown"
           aria-expanded="false"
+          data-testid="dropdownButton"
         >
           Sort By
         </button>
-        <ul class="dropdown-menu">
+        <ul className="dropdown-menu">
           <li>
             <button
-              class="dropdown-item"
+              className="dropdown-item"
               onClick={() => {
                 this.OnTrigger(false);
               }}
+              data-testid="dropdownOption1"
             >
               Newest first
             </button>
           </li>
           <li>
             <button
-              class="dropdown-item"
+              className="dropdown-item"
               onClick={() => {
                 this.OnTrigger(true);
               }}
+              data-testid="dropdownOption2"
             >
               Oldest first
             </button>

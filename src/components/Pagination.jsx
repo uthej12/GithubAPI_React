@@ -26,7 +26,7 @@ class Pagination extends React.Component {
 
   OnTrigger(x) {
     //this will be triggered on click of different page number and callback will be sent to parent GistList
-    console.log("Go to ", x);
+    //console.log("Go to ", x);
     this.setState({ pageNo: x });
     this.props.parentCallback(x);
   }
@@ -37,13 +37,14 @@ class Pagination extends React.Component {
         <div className="row">
           <div className="container d-flex justify-content-center p-3">
             <nav className="Pagination">
-              <ul class="pagination">
-                <li class="page-item">
+              <ul className="pagination">
+                <li className="page-item">
                   <button
-                    class="page-link"
+                    className="page-link"
                     onClick={() =>
                       this.OnTrigger(Math.max(0, this.state.pageNo - 1))
                     }
+                    data-testid="prev"
                   >
                     <span aria-hidden="true">&laquo;</span>
                   </button>
@@ -51,17 +52,21 @@ class Pagination extends React.Component {
                 {this.createPageArray(this.state.totalPages).map((PageNo) => {
                   if (PageNo === this.state.pageNo) {
                     return (
-                      <li key={PageNo} class="page-item active showWhen">
-                        <button class="page-link" href="#">
+                      <li
+                        key={PageNo}
+                        className="page-item active showWhen"
+                        data-testid="activePage"
+                      >
+                        <button className="page-link" href="#">
                           {PageNo + 1}
                         </button>
                       </li>
                     );
                   } else {
                     return (
-                      <li key={PageNo} class="page-item showWhen">
+                      <li key={PageNo} className="page-item showWhen">
                         <button
-                          class="page-link"
+                          className="page-link"
                           onClick={() => this.OnTrigger(PageNo)}
                         >
                           {PageNo + 1}
@@ -70,9 +75,9 @@ class Pagination extends React.Component {
                     );
                   }
                 })}
-                <li class="page-item">
+                <li className="page-item">
                   <button
-                    class="page-link"
+                    className="page-link"
                     onClick={() =>
                       this.OnTrigger(
                         Math.min(
@@ -81,6 +86,7 @@ class Pagination extends React.Component {
                         )
                       )
                     }
+                    data-testid="next"
                   >
                     <span aria-hidden="true">&raquo;</span>
                   </button>

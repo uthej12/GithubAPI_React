@@ -17,18 +17,16 @@ function GistDisplay(props) {
   return (
     <div className="row">
       <div className="col d-flex justify-content-center">
-        <div className="card sideTextBar mt-2">
+        <div className="card sideTextBar mt-2" data-testid="textContent">
           {props.text.map((line, index) => {
             //console.log(line, line.length);
             return (
-              <div className="row">
+              <div className="row" key={index}>
                 <div className="col-1 d-none d-sm-block sideText">
                   <pre className="gistPrint">{index + 1}</pre>
                 </div>
                 <div className="col-11">
-                  <pre className="gistPrint" key={index}>
-                    {line}
-                  </pre>
+                  <pre className="gistPrint">{line}</pre>
                 </div>
               </div>
             );

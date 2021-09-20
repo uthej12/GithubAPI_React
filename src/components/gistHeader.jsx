@@ -22,15 +22,21 @@ function GistHeader(props) {
                   src={props.owner.avatar_url}
                   alt=""
                   className="avatarImage"
+                  data-testid="avatar"
                 />
               </span>
               <div className="col-9 col-sm-3 col-md-4">
-                <div className="row nameDate">{props.owner.login}</div>
+                <div className="row nameDate" data-testid="ownerName">
+                  {props.owner.login}
+                </div>
                 <div className="row timeElapse">
                   {calcTimeInterval(props.createdAt)}
                 </div>
               </div>
-              <div className="col-8 col-sm-7 col-md-7 d-none d-md-block text-end">
+              <div
+                className="col-8 col-sm-7 col-md-7 d-none d-md-block text-end"
+                data-testid="description"
+              >
                 {props.description}
               </div>
             </div>

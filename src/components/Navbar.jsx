@@ -10,9 +10,9 @@ Navbar component responsible for rendereing the Navbar, using the given logo.
 */
 function Navbar() {
   return (
-    <nav class="navbar navbar-light navigationBar">
-      <div class="container pl-5">
-        <a class="navbar-brand" href="#">
+    <nav className="navbar navbar-light navigationBar">
+      <div className="container pl-5">
+        <a className="navbar-brand" href="#">
           <img src={logo} alt="" height="50px" width="120px"></img>
         </a>
       </div>
